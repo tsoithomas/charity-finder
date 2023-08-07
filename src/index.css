@@ -34,3 +34,9 @@
   from {filter: drop-shadow(0 0 1em #ffbdbdaa)}
   to {filter: drop-shadow(0 0 0.5em #ffbdbdaa)}
 }
+
+@media screen and (max-width: 599px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
