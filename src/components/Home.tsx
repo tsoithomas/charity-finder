@@ -2,6 +2,7 @@ import React, { FormEvent } from "react";
 import { useState } from "react";
 import Search from "./Search";
 import CharityList from "./CharityList";
+import Header from "./Header";
 
 const apiKey = "pk_live_a3676b9cf7a43e56d90f4f562f4bea7b";
 const searchUri = "https://partners.every.org/v0.2/search/"
@@ -58,6 +59,7 @@ function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Header/>
       <Search onSearch={handleSearch} />
       <CharityList charities={charities} />
     </div>

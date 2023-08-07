@@ -1,11 +1,17 @@
 import React from "react";
+import Header from "./Header";
 
 const FavoriteCharities = () => {
 
     return (
-        <div>
+        <div className="drop-shadow">
+            <Header/>
+
+
             FavoriteCharities
+
         </div>
+
     )
 };
 
