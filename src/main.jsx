@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Root from './components/Root.tsx'
-import Home from './components/Home.tsx'
-import FavoriteCharities from './components/FavoriteCharities.tsx';
+import Root from './components/Root'
+import Home from './components/Home'
+import Search from './components/SearchBar'
+import CharityDetail from './components/CharityDetail'
+import FavoriteCharities from './components/FavoriteCharities';
 import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 // import { Root } from 'postcss';
 
 const router = createBrowserRouter([
@@ -16,7 +19,9 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { path: "", element: <Home /> },
+      { path: "search/:terms", element: <Search /> },
       { path: "favorites", element: <FavoriteCharities /> },
+      { path: "charity/:id", element: <CharityDetail /> },
     ],
   },
 ]);
